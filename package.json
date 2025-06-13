@@ -1,0 +1,43 @@
+{
+  "name": "enterprise-level-hello-world",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/orchestrator.ts",
+    "start:letters": "concurrently \"npm run start:h\" \"npm run start:e\" \"npm run start:l1\" \"npm run start:l2\" \"npm run start:o\" \"npm run start:w\" \"npm run start:r\" \"npm run start:d\"",
+    "start:h": "ts-node src/letters/h.ts",
+    "start:e": "ts-node src/letters/e.ts",
+    "start:l1": "ts-node src/letters/l1.ts",
+    "start:l2": "ts-node src/letters/l2.ts",
+    "start:o": "ts-node src/letters/o.ts",
+    "start:w": "ts-node src/letters/w.ts",
+    "start:r": "ts-node src/letters/r.ts",
+    "start:d": "ts-node src/letters/d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maciejbaba/enterprise-level-hello-world.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maciejbaba/enterprise-level-hello-world/issues"
+  },
+  "homepage": "https://github.com/maciejbaba/enterprise-level-hello-world#readme",
+  "description": "An enterprise-level Hello World application with microservices architecture",
+  "dependencies": {
+    "express": "^5.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "axios": "^1.6.7",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.18",
+    "@types/cors": "^2.8.17"
+  }
+}

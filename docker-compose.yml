@@ -1,0 +1,80 @@
+services:
+  orchestrator:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+    depends_on:
+      - h-service
+      - e-service
+      - l1-service
+      - l2-service
+      - o-service
+      - w-service
+      - r-service
+      - d-service
+
+  h-service:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+    command: npm run start:h
+
+  e-service:
+    build: .
+    ports:
+      - "3002:3002"
+    environment:
+      - PORT=3002
+    command: npm run start:e
+
+  l1-service:
+    build: .
+    ports:
+      - "3003:3003"
+    environment:
+      - PORT=3003
+    command: npm run start:l1
+
+  l2-service:
+    build: .
+    ports:
+      - "3004:3004"
+    environment:
+      - PORT=3004
+    command: npm run start:l2
+
+  o-service:
+    build: .
+    ports:
+      - "3005:3005"
+    environment:
+      - PORT=3005
+    command: npm run start:o
+
+  w-service:
+    build: .
+    ports:
+      - "3006:3006"
+    environment:
+      - PORT=3006
+    command: npm run start:w
+
+  r-service:
+    build: .
+    ports:
+      - "3007:3007"
+    environment:
+      - PORT=3007
+    command: npm run start:r
+
+  d-service:
+    build: .
+    ports:
+      - "3008:3008"
+    environment:
+      - PORT=3008
+    command: npm run start:d 
